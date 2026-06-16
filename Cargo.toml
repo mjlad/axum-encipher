@@ -9,6 +9,10 @@ readme      = "README.md"
 keywords    = ["axum", "session", "encryption", "middleware", "tower"]
 categories  = ["web-programming::http-server", "cryptography"]
 
+[features]
+tracing = ["dep:tracing"]
+
+
 [dependencies]
 axum       = "0.8"
 tower      = "0.5"
@@ -17,6 +21,8 @@ serde      = { version = "1", features = ["derive"] }
 serde_json = "1"
 tokio      = { version = "1", features = ["full"] }
 thiserror  = "2"
+tracing = { version = "0.1", optional = true }
+
 
 [dev-dependencies]
 axum-test = "18"
