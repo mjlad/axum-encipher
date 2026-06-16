@@ -1,0 +1,23 @@
+[package]
+name        = "axum-encipher"
+version     = "0.1.0"
+edition     = "2024"
+description = "Encrypted session middleware for axum — stateless, no database required"
+license     = "Apache-2.0"
+repository  = "https://github.com/mjlad/axum-encipher"
+readme      = "README.md"
+keywords    = ["axum", "session", "encryption", "middleware", "tower"]
+categories  = ["web-programming::http-server", "cryptography"]
+
+[dependencies]
+axum       = "0.8"
+tower      = "0.5"
+encipher   = "0.1"
+serde      = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio      = { version = "1", features = ["full"] }
+thiserror  = "2"
+
+[dev-dependencies]
+axum-test = "18"
+tokio     = { version = "1", features = ["full"] }
